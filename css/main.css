@@ -79,9 +79,9 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 25px; font-weight: 700; letter-spacing: 0.12em;
   color: var(--midnight); text-decoration: none;
-  text-transform: uppercase;
+  text-transform: uppercase; flex: 1;
 }
-.nav-links { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+.nav-links { display: flex; align-items: center; gap: 4px; }
 .nav-link {
   font-size: 15px; font-weight: 500; color: var(--midnight);
   text-decoration: none; padding: 6px 14px; border-radius: 20px;
@@ -90,7 +90,7 @@ body {
   position: relative;
 }
 .nav-link:hover { background: rgba(0,0,0,0.08); }
-.nav-right { display: flex; align-items: center; gap: 8px; }
+.nav-right { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; }
 .cart-btn {
   position: relative; width: 40px; height: 40px;
   display: flex; align-items: center; justify-content: center;

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D14" />
+  <title>Често задавани въпроси | LIRO</title>
+  <link rel="icon" type="image/png" href="../Images/pro-transparent.png" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+    .legal-page h1 { font-size: clamp(28px,4vw,40px); font-weight: 300; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .legal-page .legal-intro { font-size: 16px; color: var(--text-secondary); margin-bottom: 56px; }
+    .legal-section { margin-bottom: 48px; }
+    .legal-section h2 { font-size: 18px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
+      font-size: 15px; font-weight: 500; color: var(--text-primary); line-height: 1.5;
+      transition: color var(--transition);
+    }
+    .faq-question:hover { color: var(--midnight); }
+    .faq-icon {
+      flex-shrink: 0; width: 20px; height: 20px; margin-left: 16px;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer p {
+      font-size: 14px; color: var(--text-secondary); line-height: 1.75;
+      padding-bottom: 20px;
+    }
+    .faq-answer p strong { color: var(--text-primary); font-weight: 500; }
+    .highlight-box { background: var(--surface); border-radius: var(--radius-lg); padding: 20px 24px; margin: 24px 0; border-left: 3px solid var(--gold); }
+    .highlight-box p { font-size: 14px; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<div class="announcement-bar">Безплатна доставка за всяка поръчка!</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">LIRO</a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link">Наргилета</a>
+        <div class="dropdown-menu">
+          <a href="neo.html" class="dropdown-item">
+            <img src="../Images/neo-transparent.png" alt="LIRO Neo" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Neo</span>
+              <span class="dropdown-item-sub">Компактен и удобен.</span>
+            </div>
+            <span class="dropdown-item-price">от 129 €</span>
+          </a>
+          <a href="aura.html" class="dropdown-item">
+            <img src="../Images/aura-tranparent.png" alt="LIRO Aura" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Aura</span>
+              <span class="dropdown-item-sub">Елегантен дизайн. Създаден за ежедневна употреба.</span>
+            </div>
+            <span class="dropdown-item-price">от 249 €</span>
+          </a>
+          <a href="pro.html" class="dropdown-item">
+            <img src="../Images/pro-transparent.png" alt="LIRO Pro" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Pro</span>
+              <span class="dropdown-item-sub">Съвършено удоволствие продължаващо часове наред.</span>
+            </div>
+            <span class="dropdown-item-price">от 399 €</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">За нас</a>
+      <a href="faq.html" class="nav-link">Често задавани въпроси</a>
+    </div>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-btn">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="legal-page">
+  <p class="section-label" style="margin-bottom:12px">Поддръжка</p>
+  <h1>Често задавани въпроси</h1>
+  <p class="legal-intro">Отговори на най-честите въпроси за продуктите, доставката и поддръжката на LIRO.</p>
+
+  <!-- ПРОДУКТИ -->
+  <div class="legal-section">
+    <h2>Продукти</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Какво прави LIRO различен от обикновено наргиле?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>LIRO е електронно наргиле — без въглени, без тютюн, без дим. Използва <strong>нагряване чрез индукция или конвекция</strong>, което осигурява чист пар с постоянна температура. Няма нужда от подготовка или почистване след всяка сесия.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Кой модел е подходящ за мен?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p><strong>LIRO Neo (129 €)</strong> — идеален начален модел. Компактен, лесен за употреба, перфектен за ежедневна употреба.<br><br>
+        <strong>LIRO Aura (249 €)</strong> — балансът между дизайн и мощност. По-голям резервоар и по-дълга сесия.<br><br>
+        <strong>LIRO Pro (399 €)</strong> — флагманският модел. Максимална производителност, прецизен контрол на температурата и най-дълга сесия.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Колко дълго трае една сесия?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>LIRO Neo осигурява до <strong>45 минути</strong> непрекъсната употреба. LIRO Aura — до <strong>75 минути</strong>. LIRO Pro — до <strong>120 минути</strong> на едно зареждане, в зависимост от интензивността на употреба.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Нужни ли са консумативи?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Да. Устройствата използват <strong>течности за наргиле</strong> (налични в нашия магазин), зареждани в резервоара. Единственото, което се сменя периодично, е <strong>чашката</strong> — препоръчваме смяна на всеки 3–4 месеца при редовна употреба.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Безопасно ли е устройството?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Всички LIRO устройства преминават <strong>300+ часа тестване</strong> преди пускане. Оборудвани са със защита от прегряване, автоматично изключване и сертифицирани батерии. Продуктите отговарят на европейските стандарти за безопасност.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПОРЪЧКА И ДОСТАВКА -->
+  <div class="legal-section">
+    <h2>Поръчка и Доставка</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Как мога да поръчам?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Избери продукт, добави го в количката и завърши поръчката. Приемаме <strong>наложен платеж</strong> (плащане при доставка). Не е нужна регистрация.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Колко струва доставката?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p><strong>Доставката е безплатна</strong> за всяка поръчка на територията на България — без минимална стойност.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Кога ще получа поръчката си?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Поръчки направени до <strong>13:00 ч.</strong> се обработват същия ден. Доставката е в рамките на <strong>1 до 3 работни дни</strong> чрез Спиди.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Доставяте ли извън България?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Към момента доставяме <strong>само на територията на България</strong>. Работим по разширяване на покритието.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ГАРАНЦИЯ И ВРЪЩАНЕ -->
+  <div class="legal-section">
+    <h2>Гаранция и Връщане</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Каква гаранция получавам?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Всички устройства идват с <strong>2 години гаранция</strong> срещу производствени дефекти. При LIRO Pro е налична и опция за <strong>разширена гаранция от 3 години</strong>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Мога ли да върна продукта?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Да. Имаш право на връщане в рамките на <strong>14 дни</strong> от получаване, ако продуктът е в оригинална опаковка и неизползван. Виж пълните условия на страницата <a href="returns.html" style="color:var(--midnight);text-decoration:underline">Връщане и Рекламации</a>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Устройството ми не работи — какво да направя?
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Свържи се с нас на <strong>support@liro-bg.com</strong> с описание на проблема и снимки. Ще отговорим в рамките на 24 часа в работни дни и ще намерим решение — замяна, ремонт или възстановяване на сумата.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p>Не намери отговор? Пиши ни на <strong>support@liro-bg.com</strong> — отговаряме до 24 часа.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">LIRO</div>
+      <p>Ново поколение е-наргилета — проектирани в България.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Продукти</h4>
+      <a href="neo.html">LIRO Neo</a>
+      <a href="aura.html">LIRO Aura</a>
+      <a href="pro.html">LIRO Pro</a>
+    </div>
+    <div class="footer-col">
+      <h4>Компания</h4>
+      <a href="about.html">За нас</a>
+    </div>
+    <div class="footer-col">
+      <h4>Поддръжка</h4>
+      <a href="delivery.html">Доставка и Плащане</a>
+      <a href="returns.html">Връщане и Рекламация</a>
+      <a href="faq.html">Често задавани въпроси</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LIRO Technologies. Всички права запазени.</span>
+  </div>
+</footer>
+
+<script src="../js/cart.js"></script>
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    navbar.style.background = 'rgba(250,250,248,0.95)';
+  } else {
+    navbar.style.background = '';
+  }
+});
+</script>
+<script>
+(function(){
+  var bar = document.querySelector('.announcement-bar');
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 10){
+      bar.classList.add('bar-hidden');
+      nav.style.top = '0';
+    } else {
+      bar.classList.remove('bar-hidden');
+      nav.style.top = '36px';
+    }
+  }, {passive:true});
+})();
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+<script src="../js/mobile-nav.js"></script>
+</body>
+</html>
