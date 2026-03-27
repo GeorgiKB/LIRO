@@ -4,3 +4,5 @@ screenshot-mobile.mjs
 serve.mjs
 SKILL.md
 node_modules/
+
+.vercel
