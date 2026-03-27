@@ -2,47 +2,47 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.liro-bg.com/</loc>
+    <loc>https://liro-bg.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/neo</loc>
+    <loc>https://liro-bg.com/neo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/aura</loc>
+    <loc>https://liro-bg.com/aura</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/pro</loc>
+    <loc>https://liro-bg.com/pro</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/about</loc>
+    <loc>https://liro-bg.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/faq</loc>
+    <loc>https://liro-bg.com/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/delivery</loc>
+    <loc>https://liro-bg.com/delivery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/returns</loc>
+    <loc>https://liro-bg.com/returns</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.liro-bg.com/cart</loc>
+    <loc>https://liro-bg.com/cart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>

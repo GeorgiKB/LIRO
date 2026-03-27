@@ -88,15 +88,8 @@ function updateCartBadge() {
   });
 }
 
-function getCartPagePath() {
-  const depth = window.location.pathname.split('/').filter(Boolean).length;
-  return depth > 1 ? 'cart.html' : 'pages/cart.html';
-}
-
-function getCheckoutPagePath() {
-  const depth = window.location.pathname.split('/').filter(Boolean).length;
-  return depth > 1 ? 'checkout.html' : 'pages/checkout.html';
-}
+function getCartPagePath() { return '/cart'; }
+function getCheckoutPagePath() { return '/checkout'; }
 
 function showCartDrawer() {
   let overlay = document.getElementById('liro-drawer-overlay');
