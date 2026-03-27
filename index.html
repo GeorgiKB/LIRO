@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D14" />
+  <title>LIRO — Наргилета от ново поколение</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="announcement-bar">Безплатна доставка за всяка поръчка!</div>
+
+<!-- NAVBAR -->
+<nav class="navbar dark" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">LIRO</a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link" style="color:rgba(250,250,248,0.85)">Наргилета</a>
+        <div class="dropdown-menu">
+          <a href="pages/neo.html" class="dropdown-item">
+            <img src="Images/neo-transparent.png" alt="LIRO Neo" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Neo</span>
+              <span class="dropdown-item-sub">Твоето начало. Вкусът без компромис.</span>
+            </div>
+            <span class="dropdown-item-price">от 129 €</span>
+          </a>
+          <a href="pages/aura.html" class="dropdown-item">
+            <img src="Images/aura-tranparent.png" alt="LIRO Aura" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Aura</span>
+              <span class="dropdown-item-sub">По-дълго. По-дълбоко. По-силно.</span>
+            </div>
+            <span class="dropdown-item-price">от 249 €</span>
+          </a>
+          <a href="pages/pro.html" class="dropdown-item">
+            <img src="Images/pro-transparent.png" alt="LIRO Pro" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Pro</span>
+              <span class="dropdown-item-sub">Абсолютното преживяване. Без компромис.</span>
+            </div>
+            <span class="dropdown-item-price">от 399 €</span>
+          </a>
+        </div>
+      </div>
+      <a href="pages/about.html" class="nav-link" style="color:rgba(250,250,248,0.85)">За нас</a>
+    </div>
+    <div class="nav-right">
+      <a href="pages/cart.html" class="cart-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(250,250,248,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-split">
+  <div class="hero-bg"></div>
+
+  <!-- Grain texture -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.03;pointer-events:none" xmlns="http://www.w3.org/2000/svg">
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain)"/>
+  </svg>
+
+  <!-- Radial glow behind product -->
+  <div style="position:absolute;right:0;top:50%;transform:translateY(-50%);width:55%;height:120%;background:radial-gradient(ellipse 70% 60% at 60% 50%,rgba(197,169,106,0.10) 0%,transparent 70%);pointer-events:none"></div>
+
+
+  <div class="hero-inner">
+    <div class="hero-content hero-content-left fade-up">
+      <p class="hero-motto fade-up" style="font-size:clamp(36px,4.4vw,64px);font-weight:900;color:rgba(250,250,248,0.18);letter-spacing:-0.03em;line-height:1;margin-bottom:20px;white-space:nowrap">Чист дим. Без въглени.</p>
+      <h1 class="hero-title delay-1">
+        Истинския вкус<br><em>на наргилето</em>
+      </h1>
+      <p class="hero-sub delay-2">
+        Представяме ти наргилетата, които оставят въглените в миналото. Чиста наслада без компромис.
+      </p>
+      <div class="hero-actions delay-3">
+        <a href="pages/pro.html" class="hero-buy-btn">
+          <span class="hero-buy-label">LIRO PRO</span>
+          <span class="hero-buy-cta">Купи сега →</span>
+        </a>
+        <a href="#models" class="btn btn-ghost">Разгледай всички модели</a>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-up delay-2">
+      <img
+        src="Images/pro-transparent.png"
+        alt="LIRO Pro"
+        class="hero-product-img"
+      />
+      <div class="hero-product-glow"></div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0.4;animation:bounce 2s infinite">
+    <span style="font-size:11px;letter-spacing:0.2em;color:#FAFAF8;text-transform:uppercase">Открий повече</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FAFAF8" stroke-width="1.5">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<style>
+@keyframes bounce {
+  0%,100%{transform:translateX(-50%) translateY(0)}
+  50%{transform:translateX(-50%) translateY(6px)}
+}
+
+/* Hero split layout */
+.hero-split { justify-content: flex-start; text-align: left; }
+.hero-inner {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 1200px;
+  margin: 0 auto; padding: 0 12px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; min-height: 100vh;
+}
+.hero-content-left {
+  text-align: left; flex: 0 0 auto; max-width: 480px;
+}
+.hero-content-left .hero-sub { margin-left: 0; margin-right: 0; }
+.hero-content-left .hero-actions { justify-content: flex-start; }
+
+/* Compact hero title */
+.hero-split .hero-title {
+  font-size: clamp(42px, 3.8vw, 60px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.hero-split .hero-sub {
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 36px;
+  max-width: 380px;
+  color: rgba(250,250,248,0.85);
+}
+.hero-split .hero-eyebrow { margin-bottom: 18px; }
+
+/* Product image column */
+.hero-visual {
+  flex: 1 1 auto;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative; min-width: 0;
+}
+.hero-product-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  will-change: transform;
+  filter: drop-shadow(0 40px 80px rgba(197,169,106,0.18)) drop-shadow(0 0 40px rgba(197,169,106,0.08));
+}
+
+/* "Чист дим без въглени" feature line */
+.hero-feature {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+.hero-feature-dot {
+  display: inline-block;
+  width: 20px; height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Hero buy button */
+.hero-buy-btn {
+  display: inline-flex; flex-direction: column;
+  background: rgba(250,250,248,0.95);
+  color: var(--midnight);
+  padding: 13px 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: background 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 1px 4px rgba(0,0,0,0.15);
+  min-width: 140px;
+}
+.hero-buy-btn:hover { background: #fff; transform: translateY(-2px); }
+.hero-buy-btn:active { transform: translateY(0); }
+.hero-buy-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #888; margin-bottom: 2px;
+}
+.hero-buy-cta {
+  font-size: 15px; font-weight: 600; color: var(--midnight); letter-spacing: -0.01em;
+}
+
+.hero-product-glow {
+  position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 40px;
+  background: radial-gradient(ellipse 100% 100% at 50% 50%, rgba(197,169,106,0.35), transparent 80%);
+  border-radius: 50%;
+  will-change: transform, opacity;
+  filter: blur(12px);
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .hero-split { text-align: center; }
+  .hero-inner {
+    flex-direction: column; justify-content: center;
+    padding: 100px 24px 80px; gap: 24px; min-height: 100vh;
+  }
+  .hero-content-left { text-align: center; max-width: 100%; }
+  .hero-content-left .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-content-left .hero-actions { justify-content: center; }
+  .hero-visual { width: 100%; }
+  .hero-product-img { max-width: 280px; }
+}
+</style>
+
+<!-- MODELS SECTION -->
+<section class="section section-surface" id="models" style="padding:0">
+
+  <!-- Gray band: title + images -->
+  <div class="lineup-gray-area">
+    <div class="site-container">
+      <div class="reveal" style="text-align:center;padding:96px 0 0">
+        <h2 class="section-title" style="margin-bottom:12px">Открий своя LIRO</h2>
+        <a href="#models" class="lineup-compare-link">Сравни нашите продукти</a>
+      </div>
+      <div class="lineup-images-row">
+        <div class="lineup-img-cell reveal" style="transition-delay:0.1s">
+          <img src="Images/neo-transparent.png" alt="LIRO Neo" class="lineup-product-img" />
+        </div>
+        <div class="lineup-img-cell reveal" style="transition-delay:0.2s">
+          <img src="Images/aura-tranparent.png" alt="LIRO Aura" class="lineup-product-img" />
+        </div>
+        <div class="lineup-img-cell reveal" style="transition-delay:0.3s">
+          <img src="Images/pro-transparent.png" alt="LIRO Pro" class="lineup-product-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Text details -->
+  <div class="site-container" style="padding-bottom:80px">
+    <div class="lineup-text-row">
+      <!-- NEO -->
+      <div class="lineup-text-col reveal" style="transition-delay:0.1s">
+        <div class="lineup-name">LIRO Neo</div>
+        <div class="lineup-tagline">Компактен и удобен.</div>
+        <div class="lineup-price">129 €</div>
+        <ul class="feature-list">
+          <li class="feat-yes">Керамична чашка</li>
+          <li class="feat-yes">Смарт температурен контрол</li>
+          <li class="feat-yes">5 цветови варианта</li>
+          <li class="feat-no">OLED дисплей</li>
+          <li class="feat-no">Бързо зареждане</li>
+          <li class="feat-no">Оплетен кабел</li>
+        </ul>
+        <div class="lineup-specs">
+          <div class="lineup-spec-row"><span>Батерия</span><span>1800 mAh</span></div>
+          <div class="lineup-spec-row"><span>В кутията</span><span>3 чашки, 3 мундщука</span></div>
+        </div>
+        <a href="pages/neo.html" class="btn-lineup">Купи</a>
+      </div>
+
+      <!-- AURA -->
+      <div class="lineup-text-col reveal" style="transition-delay:0.2s">
+        <div class="lineup-name">LIRO Aura</div>
+        <div class="lineup-tagline">Елегантел дизайн. Създаден за ежедневна употреба.</div>
+        <div class="lineup-price">249 €</div>
+        <ul class="feature-list">
+          <li class="feat-yes">Керамична чашка</li>
+          <li class="feat-yes">Смарт температурен контрол</li>
+          <li class="feat-yes">5 цветови варианта</li>
+          <li class="feat-yes">OLED дисплей</li>
+          <li class="feat-yes">Бързо зареждане</li>
+          <li class="feat-no">Оплетен кабел</li>
+        </ul>
+        <div class="lineup-specs">
+          <div class="lineup-spec-row"><span>Батерия</span><span>2500 mAh</span></div>
+          <div class="lineup-spec-row"><span>В кутията</span><span>3 чашки, 3 мундщука</span></div>
+        </div>
+        <a href="pages/aura.html" class="btn-lineup">Купи</a>
+      </div>
+
+      <!-- PRO -->
+      <div class="lineup-text-col reveal" style="transition-delay:0.3s">
+        <div class="lineup-name">LIRO Pro</div>
+        <div class="lineup-tagline">Съвършено удоволствие продължаващо часове наред.</div>
+        <div class="lineup-price">399 €</div>
+        <ul class="feature-list">
+          <li class="feat-yes">Керамична чашка</li>
+          <li class="feat-yes">Смарт температурен контрол</li>
+          <li class="feat-yes">2 цветови варианта</li>
+          <li class="feat-yes">OLED дисплей</li>
+          <li class="feat-yes">Бързо зареждане</li>
+          <li class="feat-yes">Оплетен кабел</li>
+        </ul>
+        <div class="lineup-specs">
+          <div class="lineup-spec-row"><span>Батерия</span><span>3500 mAh</span></div>
+          <div class="lineup-spec-row"><span>В кутията</span><span>3 чашки, 3 мундщука + оплетен кабел</span></div>
+        </div>
+        <a href="pages/pro.html" class="btn-lineup">Купи</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- WHY SECTION -->
+<section class="section" id="why">
+  <div class="site-container">
+    <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto">
+      <h2 class="section-title" style="margin-bottom:16px">Най-новото поколение<br>наргилета е тук</h2>
+      <p class="section-sub" style="margin:0 auto">Забравете за въглища, за миризми и за горчив дим. LIRO използва прецизна електронна технология, която прегрява тютюна точно колкото трябва — нищо повече.</p>
+    </div>
+
+    <div class="why-grid reveal" style="transition-delay:0.1s">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5A96A" stroke-width="1.5" stroke-linecap="round">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3>Без въглен, без горчивина</h3>
+        <p>Традиционните въглища изгарят тютюна неравномерно и добавят неприятни нотки. LIRO нагрява тютюна електрически, запазвайки всяка нюанс от аромата.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5A96A" stroke-width="1.5" stroke-linecap="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Стаята ти остава чиста</h3>
+        <p>Без въглени — без пепел, без изгорели маси, без миризма, която се задържа с часове. LIRO оставя само аромата на тютюна, нищо друго.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5A96A" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l2 2"/>
+          </svg>
+        </div>
+        <h3>Прецизна температура</h3>
+        <p>LIRO поддържа оптимална температура от първата до последната теглица. Нито изгарено, нито недогрято — само перфектен дим всеки път.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5A96A" stroke-width="1.5" stroke-linecap="round">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3>Лесно и бързо</h3>
+        <p>Зареди чашката, постави мундщука, натисни бутона. Готово за 90 секунди. Без разпалване, без чакане, без неудобство.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5A96A" stroke-width="1.5" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>По-чист дим</h3>
+        <p>Без горенето на въглена в сесията, дишаш по-чист дим с по-богат аромат. Разликата се усеща от първата теглица.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">LIRO</div>
+      <p>Ново поколение е-наргилета — проектирани в България, доставяни из цяла Европа. Чистият вкус на тютюна, без компромис.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Продукти</h4>
+      <a href="pages/neo.html">LIRO Neo</a>
+      <a href="pages/aura.html">LIRO Aura</a>
+      <a href="pages/pro.html">LIRO Pro</a>
+    </div>
+    <div class="footer-col">
+      <h4>Компания</h4>
+      <a href="pages/about.html">За нас</a>
+    </div>
+    <div class="footer-col">
+      <h4>Поддръжка</h4>
+      <a href="pages/delivery.html">Доставка и Плащане</a>
+      <a href="pages/returns.html">Връщане и Рекламация</a>
+      <a href="pages/faq.html">Често задавани въпроси</a>
+      <a href="#">Връщания</a>
+      <a href="#">Наръчник</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LIRO Technologies. Всички права запазени.</span>
+    <div style="display:flex;gap:24px">
+      <a href="#" style="color:rgba(250,250,248,0.4);font-size:12px;text-decoration:none;transition:color 0.3s" onmouseenter="this.style.color='rgba(250,250,248,0.8)'" onmouseleave="this.style.color='rgba(250,250,248,0.4)'">Поверителност</a>
+      <a href="#" style="color:rgba(250,250,248,0.4);font-size:12px;text-decoration:none;transition:color 0.3s" onmouseenter="this.style.color='rgba(250,250,248,0.8)'" onmouseleave="this.style.color='rgba(250,250,248,0.4)'">Условия</a>
+      <a href="#" style="color:rgba(250,250,248,0.4);font-size:12px;text-decoration:none;transition:color 0.3s" onmouseenter="this.style.color='rgba(250,250,248,0.8)'" onmouseleave="this.style.color='rgba(250,250,248,0.4)'">Бисквитки</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script>
+// Navbar scroll behavior
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    navbar.classList.remove('dark');
+    navbar.style.background = 'rgba(250,250,248,0.92)';
+    document.querySelectorAll('.nav-link').forEach(l => l.style.color = '');
+    navbar.querySelector('.nav-logo').style.color = '';
+    navbar.querySelectorAll('.cart-btn svg').forEach(s => s.setAttribute('stroke', '#0D0D14'));
+  } else {
+    navbar.classList.add('dark');
+    navbar.style.background = '';
+    document.querySelectorAll('.nav-link').forEach(l => l.style.color = 'rgba(250,250,248,0.85)');
+    navbar.querySelector('.nav-logo').style.color = '#FAFAF8';
+    navbar.querySelectorAll('.cart-btn svg').forEach(s => s.setAttribute('stroke', 'rgba(250,250,248,0.9)'));
+  }
+});
+
+// Scroll-driven product parallax
+(function() {
+  const img = document.querySelector('.hero-product-img');
+  const glow = document.querySelector('.hero-product-glow');
+  if (!img) return;
+  let ticking = false;
+  let currentY = 0;
+  let targetY = 0;
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function tick() {
+    currentY = lerp(currentY, targetY, 0.08);
+    const y = Math.round(currentY * 100) / 100;
+    img.style.transform = 'translateY(' + y + 'px)';
+    if (glow) glow.style.opacity = 0.5 + Math.abs(y) * 0.015;
+    if (Math.abs(currentY - targetY) > 0.1) requestAnimationFrame(tick);
+    else ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    const s = window.scrollY;
+    targetY = Math.min(s * 0.06, 30);
+    if (!ticking) { ticking = true; requestAnimationFrame(tick); }
+  }, { passive: true });
+})();
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script>
+(function(){
+  var bar = document.querySelector('.announcement-bar');
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 10){
+      bar.classList.add('bar-hidden');
+      nav.style.top = '0';
+    } else {
+      bar.classList.remove('bar-hidden');
+      nav.style.top = '36px';
+    }
+  }, {passive:true});
+})();
+</script>
+<script src="js/mobile-nav.js"></script>
+</body>
+</html>

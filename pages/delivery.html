@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D14" />
+  <title>Доставка и Плащане | LIRO</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+    .legal-page h1 { font-size: clamp(28px,4vw,40px); font-weight: 300; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .legal-page .legal-intro { font-size: 16px; color: var(--text-secondary); margin-bottom: 56px; }
+    .legal-section { margin-bottom: 48px; }
+    .legal-section h2 { font-size: 18px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .legal-item { display: flex; gap: 16px; margin-bottom: 20px; }
+    .legal-item-num { font-size: 13px; font-weight: 600; color: var(--text-tertiary); min-width: 24px; padding-top: 2px; }
+    .legal-item-text { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+    .legal-item-text strong { color: var(--text-primary); font-weight: 500; }
+    .highlight-box { background: var(--surface); border-radius: var(--radius-lg); padding: 20px 24px; margin: 24px 0; border-left: 3px solid var(--gold); }
+    .highlight-box p { font-size: 14px; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<div class="announcement-bar">Безплатна доставка за всяка поръчка!</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">LIRO</a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link">Наргилета</a>
+        <div class="dropdown-menu">
+          <a href="neo.html" class="dropdown-item">
+            <img src="../Images/neo-transparent.png" alt="LIRO Neo" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Neo</span>
+              <span class="dropdown-item-sub">Компактен и удобен.</span>
+            </div>
+            <span class="dropdown-item-price">от 129 €</span>
+          </a>
+          <a href="aura.html" class="dropdown-item">
+            <img src="../Images/aura-tranparent.png" alt="LIRO Aura" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Aura</span>
+              <span class="dropdown-item-sub">Елегантен дизайн. Създаден за ежедневна употреба.</span>
+            </div>
+            <span class="dropdown-item-price">от 249 €</span>
+          </a>
+          <a href="pro.html" class="dropdown-item">
+            <img src="../Images/pro-transparent.png" alt="LIRO Pro" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Pro</span>
+              <span class="dropdown-item-sub">Съвършено удоволствие продължаващо часове наред.</span>
+            </div>
+            <span class="dropdown-item-price">от 399 €</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">За нас</a>
+    </div>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="legal-page">
+  <p class="section-label" style="margin-bottom:12px">Поддръжка</p>
+  <h1>Доставка и Плащане</h1>
+  <p class="legal-intro">Всичко, което трябва да знаеш за получаването на твоя LIRO.</p>
+
+  <!-- ДОСТАВКА -->
+  <div class="legal-section">
+    <h2>Доставка</h2>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.</span>
+      <p class="legal-item-text">Поръчките се доставят чрез куриерска фирма <strong>Спиди</strong> на територията на Република България. LIRO си запазва правото да сменя куриерския партньор, без предварително уведомление, при условие че сроковете и условията за доставка остават непроменени.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">2.</span>
+      <p class="legal-item-text">Доставят се единствено продукти съгласно потвърдени поръчки от клиента.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">3.</span>
+      <p class="legal-item-text">Доставката се осъществява <strong>единствено на територията на Република България</strong>.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">4.</span>
+      <p class="legal-item-text">Срокът на доставка е <strong>1 до 3 работни дни</strong> от потвърждаване на поръчката. Поръчки направени до <strong>13:00 ч.</strong> се обработват същия ден. Поръчки след 13:00 ч. — на следващия работен ден. LIRO не носи отговорност за закъснения поради обстоятелства извън негов контрол.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>🚚 <strong>Доставката е напълно безплатна</strong> за всяка поръчка, без минимална стойност.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">5.</span>
+      <p class="legal-item-text">Продуктът се доставя в <strong>оригинална запечатана опаковка</strong> на адреса, посочен при поръчката. При неверен адрес или телефон LIRO не носи отговорност за неизпълнена доставка.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">6.</span>
+      <p class="legal-item-text">При невъзможност за връчване при първо посещение, пратката се пренасочва към най-близкия офис на куриера. Ако не бъде потърсена в рамките на <strong>7 дни</strong>, се връща към LIRO.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">7.</span>
+      <p class="legal-item-text">Продуктите се предават само след <strong>верификация на самоличността</strong> на получателя. Лица под 18 години няма да получат пратката при никакви обстоятелства.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">8.</span>
+      <p class="legal-item-text">При автоматично прекратяване на поръчката (неполучена пратка, отказ и др.) и вече извършено плащане, LIRO възстановява сумата в рамките на <strong>14 дни</strong> от получаване на върнатия продукт, по същия начин на плащане.</p>
+    </div>
+  </div>
+
+  <!-- ПЛАЩАНЕ -->
+  <div class="legal-section">
+    <h2>Плащане</h2>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.</span>
+      <p class="legal-item-text">Допустимите начини на плащане са:<br><br>
+        <strong>а) Наложен платеж</strong> — заплащане в брой на куриера при доставка.<br>
+        <strong>б) Банкова карта</strong> (кредитна или дебитна) — авансово плащане преди доставката.
+      </p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">2.</span>
+      <p class="legal-item-text">Приемат се карти от следните видове: <strong>Visa, Visa Electron, Mastercard, Mastercard Electronic, Maestro, Diners Club, Bcard, Borica</strong>. Картата трябва да поддържа интернет транзакции.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">3.</span>
+      <p class="legal-item-text">Плащанията с карта се обработват сигурно чрез <strong>SSL криптиране</strong>. LIRO не събира, не съхранява и няма достъп до картови данни — те се обработват единствено от банката и нейния картов процесор.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">4.</span>
+      <p class="legal-item-text">Транзакционната валута е <strong>евро (€)</strong>. Банкови такси, начислени от обслужващата банка на клиента, са за негова сметка.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">5.</span>
+      <p class="legal-item-text">При успешно плащане клиентът получава <strong>имейл потвърждение</strong> на поръчката. При неуспешна транзакция може да се инициира ново плащане.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">LIRO</div>
+      <p>Ново поколение е-наргилета — проектирани в България.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Продукти</h4>
+      <a href="neo.html">LIRO Neo</a>
+      <a href="aura.html">LIRO Aura</a>
+      <a href="pro.html">LIRO Pro</a>
+    </div>
+    <div class="footer-col">
+      <h4>Компания</h4>
+      <a href="about.html">За нас</a>
+    </div>
+    <div class="footer-col">
+      <h4>Поддръжка</h4>
+      <a href="delivery.html">Доставка и Плащане</a>
+      <a href="returns.html">Връщане и Рекламация</a>
+      <a href="faq.html">Често задавани въпроси</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LIRO Technologies. Всички права запазени.</span>
+  </div>
+</footer>
+
+<script src="../js/cart.js"></script>
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    navbar.style.background = 'rgba(250,250,248,0.95)';
+  } else {
+    navbar.style.background = '';
+  }
+});
+</script>
+<script>
+(function(){
+  var bar = document.querySelector('.announcement-bar');
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 10){
+      bar.classList.add('bar-hidden');
+      nav.style.top = '0';
+    } else {
+      bar.classList.remove('bar-hidden');
+      nav.style.top = '36px';
+    }
+  }, {passive:true});
+})();
+</script>
+<script src="../js/mobile-nav.js"></script>
+</body>
+</html>

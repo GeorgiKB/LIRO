@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D14" />
+  <title>Количка | LIRO</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="announcement-bar">Безплатна доставка за всяка поръчка!</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">LIRO</a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link">Наргилета</a>
+        <div class="dropdown-menu">
+          <a href="neo.html" class="dropdown-item"><img src="../Images/neo-transparent.png" alt="LIRO Neo" class="dropdown-item-img" /><div class="dropdown-item-info"><span class="dropdown-item-name">LIRO Neo</span><span class="dropdown-item-sub">Компактен и удобен.</span></div><span class="dropdown-item-price">от 129 €</span></a>
+          <a href="aura.html" class="dropdown-item"><img src="../Images/aura-tranparent.png" alt="LIRO Aura" class="dropdown-item-img" /><div class="dropdown-item-info"><span class="dropdown-item-name">LIRO Aura</span><span class="dropdown-item-sub">Елегантен дизайн. Създаден за ежедневна употреба.</span></div><span class="dropdown-item-price">от 249 €</span></a>
+          <a href="pro.html" class="dropdown-item"><img src="../Images/pro-transparent.png" alt="LIRO Pro" class="dropdown-item-img" /><div class="dropdown-item-info"><span class="dropdown-item-name">LIRO Pro</span><span class="dropdown-item-sub">Съвършено удоволствие продължаващо часове наред.</span></div><span class="dropdown-item-price">от 399 €</span></a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">За нас</a>
+    </div>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE TITLE -->
+<div style="padding:120px 24px 40px;max-width:1100px;margin:0 auto">
+  <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500">LIRO</p>
+  <h1 style="font-family:'Inter',sans-serif;font-size:clamp(36px,5vw,52px);font-weight:400;letter-spacing:-0.02em">Количка</h1>
+</div>
+
+<!-- CART LAYOUT -->
+<div class="cart-layout" id="cartContainer">
+  <!-- ITEMS -->
+  <div>
+    <div id="cartItems" class="cart-items">
+      <!-- Rendered by JS -->
+    </div>
+    <div id="emptyCart" class="cart-empty" style="display:none">
+      <div style="width:64px;height:64px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;margin:0 auto 24px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </div>
+      <h3>Количката е празна</h3>
+      <p>Все още нямаш продукти в количката.</p>
+      <a href="../index.html#models" class="btn btn-dark">Разгледай моделите</a>
+    </div>
+    <!-- Continue shopping -->
+    <div id="continueShop" style="margin-top:24px;display:none">
+      <a href="../index.html" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);text-decoration:none;transition:color 0.3s" onmouseenter="this.style.color='var(--text-primary)'" onmouseleave="this.style.color='var(--text-secondary)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Продължи пазаруването
+      </a>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div id="summaryPanel">
+    <div class="cart-summary">
+      <h3>Обобщение</h3>
+
+      <!-- PROMO -->
+      <div>
+        <div class="promo-form">
+          <input type="text" class="promo-input" id="promoInput" placeholder="Промо код" autocomplete="off" />
+          <button class="promo-btn" id="promoBtn" onclick="applyPromoCode()">Приложи</button>
+        </div>
+        <p id="promoMsg" class="promo-msg" style="display:none"></p>
+      </div>
+
+      <!-- ROWS -->
+      <div class="summary-rows">
+        <div class="summary-row">
+          <span>Продукти</span>
+          <span id="subtotalVal">0,00 €</span>
+        </div>
+        <div class="summary-row" id="discountRow" style="display:none">
+          <span id="discountLabel">Отстъпка</span>
+          <span id="discountVal" style="color:#2d7a3a">—</span>
+        </div>
+        <div class="summary-row">
+          <span>Доставка</span>
+          <span id="shippingVal">9,99 €</span>
+        </div>
+        <div class="summary-total">
+          <span>Общо</span>
+          <span id="totalVal">0,00 €</span>
+        </div>
+      </div>
+
+      <button class="checkout-btn" id="checkoutBtn" onclick="handleCheckout()">
+        Към плащане
+      </button>
+
+      <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;text-align:center">
+        Плащане при доставка · Наложен платеж
+      </p>
+    </div>
+
+    <!-- FREE SHIPPING BANNER -->
+    <div id="freeShipBanner" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 20px;margin-top:16px;font-size:13px;color:var(--text-secondary);display:none">
+      <div style="display:flex;align-items:center;gap:8px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span id="freeShipMsg"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">LIRO</div>
+      <p>Ново поколение е-наргилета — проектирани в България.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Продукти</h4>
+      <a href="neo.html">LIRO Neo</a>
+      <a href="aura.html">LIRO Aura</a>
+      <a href="pro.html">LIRO Pro</a>
+    </div>
+    <div class="footer-col">
+      <h4>Компания</h4>
+      <a href="about.html">За нас</a>
+    </div>
+    <div class="footer-col">
+      <h4>Поддръжка</h4>
+      <a href="delivery.html">Доставка и Плащане</a>
+      <a href="returns.html">Връщане и Рекламация</a>
+      <a href="faq.html">Често задавани въпроси</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LIRO Technologies. Всички права запазени.</span>
+  </div>
+</footer>
+
+<script src="../js/cart.js"></script>
+<script>
+const SHIPPING_THRESHOLD = 150;
+const SHIPPING_COST = 9.99;
+let appliedPromo = null;
+
+function fmt(n) {
+  return n.toFixed(2).replace('.', ',') + ' €';
+}
+
+function renderCart() {
+  const cart = getCart();
+  const itemsEl = document.getElementById('cartItems');
+  const emptyEl = document.getElementById('emptyCart');
+  const summaryEl = document.getElementById('summaryPanel');
+  const continueEl = document.getElementById('continueShop');
+
+  if (cart.length === 0) {
+    itemsEl.style.display = 'none';
+    emptyEl.style.display = 'block';
+    summaryEl.style.display = 'none';
+    continueEl.style.display = 'none';
+    return;
+  }
+
+  itemsEl.style.display = 'flex';
+  emptyEl.style.display = 'none';
+  summaryEl.style.display = 'block';
+  continueEl.style.display = 'block';
+
+  itemsEl.innerHTML = cart.map((item, i) => `
+    <div class="cart-item">
+      <div class="cart-item-image">
+        <img src="${item.img || 'https://placehold.co/100x100/F2F2F5/1C1C1E?text=LIRO'}" alt="${item.name}" />
+      </div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-meta">${[item.color, item.meta].filter(Boolean).join(' • ')}</div>
+        <div class="cart-item-bottom">
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(${i}, ${(item.qty||1) - 1})">−</button>
+            <span class="qty-num">${item.qty || 1}</span>
+            <button class="qty-btn" onclick="changeQty(${i}, ${(item.qty||1) + 1})">+</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px">
+            <button class="remove-btn" onclick="removeItem(${i})">Премахни</button>
+            <div class="cart-item-price">${fmt(item.price * (item.qty||1))}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  updateSummary();
+}
+
+function updateSummary() {
+  const cart = getCart();
+  const subtotal = cart.reduce((s, i) => s + i.price * (i.qty||1), 0);
+  const shipping = subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
+  const discount = appliedPromo ? calculateDiscount(subtotal, appliedPromo) : 0;
+  const total = subtotal - discount + shipping;
+
+  document.getElementById('subtotalVal').textContent = fmt(subtotal);
+  document.getElementById('shippingVal').textContent = shipping === 0 ? 'Безплатна' : fmt(shipping);
+
+  if (discount > 0) {
+    document.getElementById('discountRow').style.display = 'flex';
+    document.getElementById('discountLabel').textContent = appliedPromo.label;
+    document.getElementById('discountVal').textContent = '−' + fmt(discount);
+  } else {
+    document.getElementById('discountRow').style.display = 'none';
+  }
+
+  document.getElementById('totalVal').textContent = fmt(total);
+
+  // Free shipping banner
+  const banner = document.getElementById('freeShipBanner');
+  const msgEl = document.getElementById('freeShipMsg');
+  if (shipping > 0) {
+    banner.style.display = 'block';
+    const remaining = SHIPPING_THRESHOLD - subtotal;
+    msgEl.textContent = `Добави още ${fmt(remaining)} за безплатна доставка`;
+  } else {
+    banner.style.display = 'none';
+  }
+}
+
+function changeQty(index, newQty) {
+  updateQty(index, newQty);
+  renderCart();
+}
+
+function removeItem(index) {
+  removeFromCart(index);
+  renderCart();
+}
+
+function applyPromoCode() {
+  const code = document.getElementById('promoInput').value.trim();
+  const msg = document.getElementById('promoMsg');
+  if (!code) return;
+
+  const promo = applyPromo(code);
+  if (promo) {
+    appliedPromo = promo;
+    msg.style.display = 'block';
+    msg.className = 'promo-msg success';
+    msg.textContent = '✓ Промо код е приложен: ' + promo.label;
+    document.getElementById('promoInput').disabled = true;
+    document.getElementById('promoBtn').disabled = true;
+    document.getElementById('promoBtn').textContent = 'Приложен';
+    updateSummary();
+  } else {
+    msg.style.display = 'block';
+    msg.className = 'promo-msg error';
+    msg.textContent = '✗ Невалиден промо код';
+    document.getElementById('promoInput').value = '';
+  }
+}
+
+function handleCheckout() {
+  const cart = getCart();
+  if (cart.length === 0) return;
+  window.location.href = 'checkout.html';
+}
+
+// Allow Enter key on promo input
+document.getElementById('promoInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') applyPromoCode();
+});
+
+// Listen for cart updates
+window.addEventListener('lira-cart-updated', () => renderCart());
+
+// Initial render
+renderCart();
+</script>
+<script>
+(function(){
+  var bar = document.querySelector('.announcement-bar');
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 10){
+      bar.classList.add('bar-hidden');
+      nav.style.top = '0';
+    } else {
+      bar.classList.remove('bar-hidden');
+      nav.style.top = '36px';
+    }
+  }, {passive:true});
+})();
+</script>
+<script src="../js/mobile-nav.js"></script>
+</body>
+</html>

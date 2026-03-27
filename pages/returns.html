@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D14" />
+  <title>Връщане и Рекламации | LIRO</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+    .legal-page h1 { font-size: clamp(28px,4vw,40px); font-weight: 300; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .legal-intro { font-size: 16px; color: var(--text-secondary); margin-bottom: 56px; }
+    .legal-section { margin-bottom: 52px; }
+    .legal-section h2 { font-size: 18px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .legal-section h3 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 28px 0 16px; }
+    .legal-item { display: flex; gap: 16px; margin-bottom: 20px; }
+    .legal-item-num { font-size: 13px; font-weight: 600; color: var(--text-tertiary); min-width: 28px; padding-top: 2px; flex-shrink: 0; }
+    .legal-item-text { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+    .legal-item-text strong { color: var(--text-primary); font-weight: 500; }
+    .legal-item-text ul { margin-top: 10px; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .legal-item-text ul li::before { content: "—"; margin-right: 8px; color: var(--gold); }
+    .highlight-box { background: var(--surface); border-radius: var(--radius-lg); padding: 20px 24px; margin: 24px 0; border-left: 3px solid var(--gold); }
+    .highlight-box p { font-size: 14px; color: var(--text-secondary); margin: 0 0 6px; line-height: 1.6; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .contact-box { background: var(--ink); border-radius: var(--radius-lg); padding: 28px 32px; margin-top: 48px; }
+    .contact-box h4 { font-size: 15px; font-weight: 600; color: #FAFAF8; margin-bottom: 12px; }
+    .contact-box p { font-size: 14px; color: rgba(250,250,248,0.6); margin: 0 0 6px; line-height: 1.6; }
+    .contact-box a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="announcement-bar">Безплатна доставка за всяка поръчка!</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">LIRO</a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link">Наргилета</a>
+        <div class="dropdown-menu">
+          <a href="neo.html" class="dropdown-item">
+            <img src="../Images/neo-transparent.png" alt="LIRO Neo" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Neo</span>
+              <span class="dropdown-item-sub">Компактен и удобен.</span>
+            </div>
+            <span class="dropdown-item-price">от 129 €</span>
+          </a>
+          <a href="aura.html" class="dropdown-item">
+            <img src="../Images/aura-tranparent.png" alt="LIRO Aura" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Aura</span>
+              <span class="dropdown-item-sub">Елегантен дизайн. Създаден за ежедневна употреба.</span>
+            </div>
+            <span class="dropdown-item-price">от 249 €</span>
+          </a>
+          <a href="pro.html" class="dropdown-item">
+            <img src="../Images/pro-transparent.png" alt="LIRO Pro" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Pro</span>
+              <span class="dropdown-item-sub">Съвършено удоволствие продължаващо часове наред.</span>
+            </div>
+            <span class="dropdown-item-price">от 399 €</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">За нас</a>
+    </div>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="legal-page">
+  <p class="section-label" style="margin-bottom:12px">Поддръжка</p>
+  <h1>Връщане и Рекламации</h1>
+  <p class="legal-intro">Твоето доверие е важно за нас. Разбери как работят гаранцията и правото ти на отказ.</p>
+
+  <!-- РЕКЛАМАЦИИ -->
+  <div class="legal-section">
+    <h2>Рекламации</h2>
+
+    <h3>1. Законова гаранция</h3>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.1.</span>
+      <p class="legal-item-text">За всички продукти, закупени от LIRO, клиентът разполага с правата, произтичащи от <strong>законовата гаранция за съответствие на стоките с договора за продажба</strong> съгласно действащото законодателство.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.2.</span>
+      <p class="legal-item-text">LIRO отговаря за всяко несъответствие на продукта, което <strong>съществува в момента на доставката и се прояви в рамките на две години</strong> от този момент.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.3.</span>
+      <p class="legal-item-text">При несъответствие клиентът може да поиска <strong>ремонт или замяна</strong> на продукта. При невъзможност — пропорционално намаляване на цената или разваляне на договора.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.4.</span>
+      <p class="legal-item-text">Рекламацията може да се предяви до <strong>две години от доставката</strong>. Несъответствие, проявило се до една година след доставката, се счита, че е съществувало при нея.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.5.</span>
+      <p class="legal-item-text">Рекламацията се предявява устно или писмено, като се прилагат: касова бележка или документ за плащане, и при наличие — протоколи или актове, установяващи несъответствието. Рекламации се приемат на имейл: <strong>support@liro.bg</strong>.</p>
+    </div>
+
+    <h3>2. Търговска гаранция</h3>
+
+    <div class="legal-item">
+      <span class="legal-item-num">2.1.</span>
+      <p class="legal-item-text">В допълнение към законовата гаранция, всички устройства LIRO се ползват с <strong>търговска гаранция от 12 месеца</strong> от датата на покупката, валидна на територията на Република България.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">2.2.</span>
+      <p class="legal-item-text">Търговската гаранция покрива дефекти в материалите и изработката при нормална употреба. <strong>Не се покрива:</strong>
+        <ul>
+          <li>нормално износване</li>
+          <li>козметични повреди (надрасквания, вдлъбнатини, счупена пластмаса)</li>
+          <li>повреда от неправилна употреба, токов удар, контакт с течности или огън</li>
+          <li>повреда от несъвместими аксесоари</li>
+          <li>неоторизирани опити за отваряне, модифициране или ремонт</li>
+          <li>неспазване на инструкциите за употреба</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">2.3.</span>
+      <p class="legal-item-text">За предявяване на рекламация по търговска гаранция свържете се с нас на <strong>support@liro.bg</strong> или на телефон в работно време.</p>
+    </div>
+  </div>
+
+  <!-- ПРАВО НА ОТКАЗ -->
+  <div class="legal-section">
+    <h2>Право на отказ от договора</h2>
+
+    <h3>1. Срок и начин на отказ</h3>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.1.</span>
+      <p class="legal-item-text">Клиентът има право да се откаже от договора <strong>без да посочва причини в срок от 14 дни</strong>, считано от момента на получаване на продукта.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>При поръчка на няколко продукта, доставени отделно, 14-дневният срок тече от получаването на <strong>последния продукт</strong>.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.2.</span>
+      <p class="legal-item-text">За упражняване на правото на отказ изпратете недвусмислено заявление до:<br><br>
+        <strong>Имейл:</strong> support@liro.bg<br>
+        <strong>Тел.:</strong> посочен на страницата за контакти
+      </p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">1.3.</span>
+      <p class="legal-item-text">В заявлението посочете: номер и дата на поръчката, дата на получаване, описание на продукта, серийния му номер, цената и вашите данни за контакт.</p>
+    </div>
+
+    <h3>2. Връщане на продукта</h3>
+
+    <div class="legal-item">
+      <span class="legal-item-num">2.1.</span>
+      <p class="legal-item-text">Продуктът трябва да бъде върнат <strong>не по-късно от 14 дни</strong> след изявлението за отказ. Разходите за връщане са за сметка на клиента.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">2.2.</span>
+      <p class="legal-item-text">Продуктът трябва да бъде върнат:
+        <ul>
+          <li>в оригинална ненарушена опаковка</li>
+          <li>без следи от механични повреди или персонализиране</li>
+          <li>в пълна окомплектовка (всички части, аксесоари, документация)</li>
+          <li>с доказателство за плащане</li>
+        </ul>
+      </p>
+    </div>
+
+    <h3>3. Възстановяване на сумата</h3>
+
+    <div class="legal-item">
+      <span class="legal-item-num">3.1.</span>
+      <p class="legal-item-text">LIRO възстановява всички плащания, включително доставката, <strong>в срок до 14 дни</strong> от получаване на върнатия продукт, по същия начин на плащане.</p>
+    </div>
+
+    <div class="legal-item">
+      <span class="legal-item-num">3.2.</span>
+      <p class="legal-item-text">Клиентът отговаря за намаляване стойността на продукта вследствие на употреба, надхвърляща необходимото за установяване на характеристиките му.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT BOX -->
+  <div class="contact-box">
+    <h4>Нужда от помощ?</h4>
+    <p>За въпроси свързани с рекламации, гаранции или връщане на продукти:</p>
+    <p>📧 <a href="mailto:support@liro.bg">support@liro.bg</a></p>
+    <p>Отговаряме в рамките на 1 работен ден.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">LIRO</div>
+      <p>Ново поколение е-наргилета — проектирани в България.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Продукти</h4>
+      <a href="neo.html">LIRO Neo</a>
+      <a href="aura.html">LIRO Aura</a>
+      <a href="pro.html">LIRO Pro</a>
+    </div>
+    <div class="footer-col">
+      <h4>Компания</h4>
+      <a href="about.html">За нас</a>
+    </div>
+    <div class="footer-col">
+      <h4>Поддръжка</h4>
+      <a href="delivery.html">Доставка и Плащане</a>
+      <a href="returns.html">Връщане и Рекламация</a>
+      <a href="faq.html">Често задавани въпроси</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LIRO Technologies. Всички права запазени.</span>
+  </div>
+</footer>
+
+<script src="../js/cart.js"></script>
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    navbar.style.background = 'rgba(250,250,248,0.95)';
+  } else {
+    navbar.style.background = '';
+  }
+});
+</script>
+<script>
+(function(){
+  var bar = document.querySelector('.announcement-bar');
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 10){
+      bar.classList.add('bar-hidden');
+      nav.style.top = '0';
+    } else {
+      bar.classList.remove('bar-hidden');
+      nav.style.top = '36px';
+    }
+  }, {passive:true});
+})();
+</script>
+<script src="../js/mobile-nav.js"></script>
+</body>
+</html>

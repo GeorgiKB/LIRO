@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D14" />
+  <title>LIRO Pro — E-наргиле | LIRO</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="announcement-bar">Безплатна доставка за всяка поръчка!</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">LIRO</a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link">Наргилета</a>
+        <div class="dropdown-menu">
+          <a href="neo.html" class="dropdown-item">
+            <img src="../Images/neo-transparent.png" alt="LIRO Neo" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Neo</span>
+              <span class="dropdown-item-sub">Компактен и удобен.</span>
+            </div>
+            <span class="dropdown-item-price">от 129 €</span>
+          </a>
+          <a href="aura.html" class="dropdown-item">
+            <img src="../Images/aura-tranparent.png" alt="LIRO Aura" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Aura</span>
+              <span class="dropdown-item-sub">Елегантен дизайн. Създаден за ежедневна употреба.</span>
+            </div>
+            <span class="dropdown-item-price">от 249 €</span>
+          </a>
+          <a href="pro.html" class="dropdown-item">
+            <img src="../Images/pro-transparent.png" alt="LIRO Pro" class="dropdown-item-img" />
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-name">LIRO Pro</span>
+              <span class="dropdown-item-sub">Съвършено удоволствие продължаващо часове наред.</span>
+            </div>
+            <span class="dropdown-item-price">от 399 €</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">За нас</a>
+    </div>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- BREADCRUMB -->
+<div class="product-page-nav">
+  <a href="../index.html">Начало</a>
+  <span>›</span>
+  <a href="#">Наргилета</a>
+  <span>›</span>
+  <span style="color:var(--text-primary)">LIRO Pro</span>
+</div>
+
+<!-- CONFIGURATOR -->
+<div class="configurator" id="configurator">
+  <div class="config-visual">
+    <div class="config-image-wrap" id="imageWrap">
+      <img id="productImage" src="../Images/pro-transparent.png" alt="LIRO Pro" />
+    </div>
+    <p id="colorName" style="text-align:center;font-size:13px;color:var(--text-secondary);margin-top:16px">Полунощ</p>
+  </div>
+
+  <div class="config-form">
+    <p class="config-eyebrow">Наргиле без въглени</p>
+    <h1 class="config-title">LIRO Pro</h1>
+    <p class="config-price" id="totalPrice">399,00 €</p>
+
+    <!-- COLORS -->
+    <div class="config-section">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <span class="config-section-title">Цвят</span>
+        <span class="config-section-current" id="colorLabel">Полунощ</span>
+      </div>
+      <div class="color-swatches">
+        <div class="color-swatch active" data-name="Полунощ" data-hex="#0D0D14" data-img="../Images/pro-transparent.png" style="background:#0D0D14" title="Полунощ"></div>
+        <div class="color-swatch" data-name="Лунна Светлина" data-hex="#F0ECE3" data-img="../Images/pro-transparent.png" style="background:#F0ECE3;border:1.5px solid #ddd" title="Лунна Светлина"></div>
+      </div>
+    </div>
+
+    <!-- CHARGER -->
+    <div class="config-section">
+      <span class="config-section-title" style="display:block;margin-bottom:16px">Зарядно устройство</span>
+      <div class="option-cards" id="chargerOptions">
+        <div class="option-card active" data-charger="none" data-price="0">
+          <div>
+            <div class="option-card-label">Без зарядно</div>
+            <div class="option-card-desc">Наргилето не се доставя с адаптер</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="option-card-price">—</span>
+            <div class="option-radio"></div>
+          </div>
+        </div>
+        <div class="option-card" data-charger="standard" data-price="19.99">
+          <div>
+            <div class="option-card-label">Стандартен адаптер 20W</div>
+            <div class="option-card-desc">Зарежда за ~2.5 часа</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="option-card-price">+19,99 €</span>
+            <div class="option-radio"></div>
+          </div>
+        </div>
+        <div class="option-card" data-charger="fast" data-price="29.99">
+          <div>
+            <div class="option-card-label">Бърз адаптер 45W</div>
+            <div class="option-card-desc">Зарежда за ~45 минути</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="option-card-price">+29,99 €</span>
+            <div class="option-radio"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WARRANTY -->
+    <div class="toggle-option">
+      <div>
+        <div class="toggle-label">Разширена гаранция</div>
+        <div class="toggle-label-sub">Покрива хардуерни дефекти до 3 години</div>
+      </div>
+      <div class="toggle-right">
+        <span class="toggle-price">+49,99 €</span>
+        <div class="toggle" id="warrantyToggle"></div>
+      </div>
+    </div>
+
+    <!-- IN BOX -->
+    <div class="config-section">
+      <span class="config-section-title" style="display:block;margin-bottom:12px">В кутията</span>
+      <ul class="inbox-list" id="inboxList">
+        <li>LIRO Pro е-наргиле</li>
+        <li>Оплетен USB-C кабел (цвят-съвместим)</li>
+        <li>3 × керамична чашка</li>
+        <li>3 × мундщук</li>
+        <li>Наръчник и сертификат за автентичност</li>
+      </ul>
+    </div>
+
+    <button class="add-to-cart-btn" id="addToCartBtn">Добави в количката</button>
+    <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;text-align:center">
+      Безплатна доставка • 30-дневно право на връщане • Гравиране по заявка
+    </p>
+  </div>
+</div>
+
+<!-- SPECS -->
+<section class="specs-section" style="background:var(--midnight)">
+  <div class="site-container">
+    <div class="reveal" style="text-align:center">
+      <p class="section-label">Технически характеристики</p>
+      <h2 class="section-title section-title-light">LIRO Pro в детайли</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);overflow:hidden;margin-top:48px" class="reveal">
+      <div style="background:#16161F;padding:32px 28px">
+        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,250,248,0.4);margin-bottom:8px">Батерия</div>
+        <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:500;color:#FAFAF8">3500</div>
+        <div style="font-size:14px;color:rgba(250,250,248,0.5);margin-top:2px">mAh</div>
+      </div>
+
+      <div style="background:#16161F;padding:32px 28px">
+        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,250,248,0.4);margin-bottom:8px">Автономия</div>
+        <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:500;color:#FAFAF8">~14</div>
+        <div style="font-size:14px;color:rgba(250,250,248,0.5);margin-top:2px">часа сесии</div>
+      </div>
+      <div style="background:#16161F;padding:32px 28px">
+        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,250,248,0.4);margin-bottom:8px">Температура</div>
+        <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:500;color:#FAFAF8">150–260</div>
+        <div style="font-size:14px;color:rgba(250,250,248,0.5);margin-top:2px">°C прецизна</div>
+      </div>
+      <div style="background:#16161F;padding:32px 28px">
+        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,250,248,0.4);margin-bottom:8px">Тегло</div>
+        <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:500;color:#FAFAF8">460</div>
+        <div style="font-size:14px;color:rgba(250,250,248,0.5);margin-top:2px">грама</div>
+      </div>
+      <div style="background:#16161F;padding:32px 28px">
+        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,250,248,0.4);margin-bottom:8px">Гаранция</div>
+        <div style="font-family:'Inter',sans-serif;font-size:28px;font-weight:500;color:var(--gold)">24</div>
+        <div style="font-size:14px;color:rgba(250,250,248,0.5);margin-top:2px">месеца стандартна</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">LIRO</div>
+      <p>Ново поколение е-наргилета — проектирани в България.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Продукти</h4>
+      <a href="neo.html">LIRO Neo</a>
+      <a href="aura.html">LIRO Aura</a>
+      <a href="pro.html">LIRO Pro</a>
+    </div>
+    <div class="footer-col">
+      <h4>Компания</h4>
+      <a href="about.html">За нас</a>
+    </div>
+    <div class="footer-col">
+      <h4>Поддръжка</h4>
+      <a href="delivery.html">Доставка и Плащане</a>
+      <a href="returns.html">Връщане и Рекламация</a>
+      <a href="faq.html">Често задавани въпроси</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LIRO Technologies. Всички права запазени.</span>
+  </div>
+</footer>
+
+<script src="../js/cart.js"></script>
+<script>
+const BASE_PRICE = 399;
+let selectedColor = { name: 'Полунощ', img: '../Images/pro-transparent.png' };
+let chargerPrice = 0;
+let warrantyActive = false;
+
+function updatePrice() {
+  const total = BASE_PRICE + chargerPrice + (warrantyActive ? 49.99 : 0);
+  document.getElementById('totalPrice').textContent = total.toFixed(2).replace('.', ',') + ' €';
+}
+function updateInbox() {
+  const chargerText = chargerPrice === 19.99 ? 'Стандартен адаптер 20W' : (chargerPrice === 29.99 ? 'Бърз адаптер 45W' : null);
+  const items = ['LIRO Pro е-наргиле', 'Оплетен USB-C кабел (цвят-съвместим)', '3 × керамична чашка', '3 × мундщук', 'Наръчник и сертификат за автентичност'];
+  if (chargerText) items.push(chargerText);
+  if (warrantyActive) items.push('Разширена гаранция (3 г.)');
+  document.getElementById('inboxList').innerHTML = items.map(i => `<li>${i}</li>`).join('');
+}
+
+// Scroll behavior for dark navbar
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    navbar.classList.remove('dark');
+    navbar.style.background = 'rgba(250,250,248,0.92)';
+    document.querySelectorAll('.nav-link').forEach(l => l.style.color = '');
+    navbar.querySelector('.nav-logo').style.color = '';
+    navbar.querySelectorAll('.cart-btn svg').forEach(s => s.setAttribute('stroke', '#0D0D14'));
+  } else {
+    navbar.classList.add('dark');
+    navbar.style.background = '';
+    document.querySelectorAll('.nav-link').forEach(l => l.style.color = 'rgba(250,250,248,0.85)');
+    navbar.querySelector('.nav-logo').style.color = '#FAFAF8';
+    navbar.querySelectorAll('.cart-btn svg').forEach(s => s.setAttribute('stroke', 'rgba(250,250,248,0.9)'));
+  }
+});
+
+document.querySelectorAll('.color-swatch').forEach(swatch => {
+  swatch.addEventListener('click', () => {
+    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+    swatch.classList.add('active');
+    selectedColor = { name: swatch.dataset.name, img: swatch.dataset.img };
+    document.getElementById('colorLabel').textContent = selectedColor.name;
+    document.getElementById('colorName').textContent = selectedColor.name;
+    document.getElementById('productImage').src = selectedColor.img;
+  });
+});
+
+document.querySelectorAll('#chargerOptions .option-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('#chargerOptions .option-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    chargerPrice = parseFloat(card.dataset.price);
+    updatePrice(); updateInbox();
+  });
+});
+
+document.getElementById('warrantyToggle').addEventListener('click', function() {
+  warrantyActive = !warrantyActive;
+  this.classList.toggle('on', warrantyActive);
+  updatePrice(); updateInbox();
+});
+
+document.getElementById('addToCartBtn').addEventListener('click', () => {
+  const total = BASE_PRICE + chargerPrice + (warrantyActive ? 49.99 : 0);
+  addToCart({
+    id: 'lira-pro', name: 'LIRO Pro', color: selectedColor.name,
+    options: { charger: chargerPrice, warranty: warrantyActive },
+    price: total, img: selectedColor.img, meta: selectedColor.name + ' • Оплетен кабел'
+  });
+});
+
+const observer = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){x.target.classList.add('visible');observer.unobserve(x.target);} }), {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script>
+(function(){
+  var bar = document.querySelector('.announcement-bar');
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 10){
+      bar.classList.add('bar-hidden');
+      nav.style.top = '0';
+    } else {
+      bar.classList.remove('bar-hidden');
+      nav.style.top = '36px';
+    }
+  }, {passive:true});
+})();
+</script>
+<script src="../js/mobile-nav.js"></script>
+</body>
+</html>
