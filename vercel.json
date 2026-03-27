@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/neo",      "destination": "/pages/neo.html" },
+    { "source": "/aura",     "destination": "/pages/aura.html" },
+    { "source": "/pro",      "destination": "/pages/pro.html" },
+    { "source": "/about",    "destination": "/pages/about.html" },
+    { "source": "/faq",      "destination": "/pages/faq.html" },
+    { "source": "/delivery", "destination": "/pages/delivery.html" },
+    { "source": "/returns",  "destination": "/pages/returns.html" },
+    { "source": "/cart",     "destination": "/pages/cart.html" },
+    { "source": "/checkout", "destination": "/pages/checkout.html" }
+  ]
+}

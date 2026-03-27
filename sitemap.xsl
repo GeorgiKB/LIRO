@@ -228,28 +228,28 @@
               <div class="url-cell">
                 <div class="url-icon">
                   <xsl:choose>
-                    <xsl:when test="contains(sitemap:loc, 'neo')">🌿</xsl:when>
-                    <xsl:when test="contains(sitemap:loc, 'aura')">✨</xsl:when>
-                    <xsl:when test="contains(sitemap:loc, 'pro')">⚡</xsl:when>
-                    <xsl:when test="contains(sitemap:loc, 'about')">🏢</xsl:when>
-                    <xsl:when test="contains(sitemap:loc, 'faq')">💬</xsl:when>
-                    <xsl:when test="contains(sitemap:loc, 'delivery')">🚚</xsl:when>
-                    <xsl:when test="contains(sitemap:loc, 'returns')">↩️</xsl:when>
-                    <xsl:when test="contains(sitemap:loc, 'cart')">🛍️</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/neo')">🌿</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/aura')">✨</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/pro')">⚡</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/about')">🏢</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/faq')">💬</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/delivery')">🚚</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/returns')">↩️</xsl:when>
+                    <xsl:when test="contains(sitemap:loc, '/cart')">🛍️</xsl:when>
                     <xsl:otherwise>🏠</xsl:otherwise>
                   </xsl:choose>
                 </div>
                 <div>
                   <a class="url-link" href="{sitemap:loc}">
                     <xsl:choose>
-                      <xsl:when test="contains(sitemap:loc, 'neo')">LIRO Neo</xsl:when>
-                      <xsl:when test="contains(sitemap:loc, 'aura')">LIRO Aura</xsl:when>
-                      <xsl:when test="contains(sitemap:loc, 'pro')">LIRO Pro</xsl:when>
-                      <xsl:when test="contains(sitemap:loc, 'about')">За нас</xsl:when>
-                      <xsl:when test="contains(sitemap:loc, 'faq')">Често задавани въпроси</xsl:when>
-                      <xsl:when test="contains(sitemap:loc, 'delivery')">Доставка и Плащане</xsl:when>
-                      <xsl:when test="contains(sitemap:loc, 'returns')">Връщане и Рекламации</xsl:when>
-                      <xsl:when test="contains(sitemap:loc, 'cart')">Количка</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/neo')">LIRO Neo</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/aura')">LIRO Aura</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/pro')">LIRO Pro</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/about')">За нас</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/faq')">Често задавани въпроси</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/delivery')">Доставка и Плащане</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/returns')">Връщане и Рекламации</xsl:when>
+                      <xsl:when test="contains(sitemap:loc, '/cart')">Количка</xsl:when>
                       <xsl:otherwise>Начало</xsl:otherwise>
                     </xsl:choose>
                   </a>
