@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0D0D14" />
   <title>LIRO Neo — E-наргиле | LIRO</title>
+  <link rel="icon" type="image/png" href="../Images/pro-transparent.png" />
   <link rel="stylesheet" href="../css/main.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -49,7 +50,7 @@
     </div>
     <div class="nav-right">
       <a href="cart.html" class="cart-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
           <line x1="3" y1="6" x2="21" y2="6"/>
           <path d="M16 10a4 4 0 01-8 0"/>
@@ -76,7 +77,6 @@
     <div class="config-image-wrap" id="imageWrap">
       <img id="productImage" src="../Images/neo-transparent.png" alt="LIRO Neo" />
     </div>
-    <p id="colorName" style="text-align:center;font-size:13px;color:var(--text-secondary);margin-top:16px;font-weight:400">Обсидианово Черно</p>
   </div>
 
   <!-- FORM -->
@@ -84,21 +84,6 @@
     <p class="config-eyebrow">Наргиле без въглени</p>
     <h1 class="config-title">LIRO Neo</h1>
     <p class="config-price" id="totalPrice">129,00 €</p>
-
-    <!-- COLORS -->
-    <div class="config-section">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-        <span class="config-section-title">Цвят</span>
-        <span class="config-section-current" id="colorLabel">Обсидианово Черно</span>
-      </div>
-      <div class="color-swatches">
-        <div class="color-swatch active" data-name="Обсидианово Черно" data-hex="#1C1C1E" data-img="../Images/neo-transparent.png" style="background:#1C1C1E" title="Обсидианово Черно"></div>
-        <div class="color-swatch" data-name="Минерално Бяло" data-hex="#E5E5EA" data-img="../Images/neo-transparent.png" style="background:#E5E5EA;border:1.5px solid #ddd" title="Минерално Бяло"></div>
-        <div class="color-swatch" data-name="Галактическо Синьо" data-hex="#2C4A7C" data-img="../Images/neo-transparent.png" style="background:#2C4A7C" title="Галактическо Синьо"></div>
-        <div class="color-swatch" data-name="Розов Кварц" data-hex="#D4A5A5" data-img="../Images/neo-transparent.png" style="background:#D4A5A5" title="Розов Кварц"></div>
-        <div class="color-swatch" data-name="Арктическа Мъгла" data-hex="#B8C5CC" data-img="../Images/neo-transparent.png" style="background:#B8C5CC" title="Арктическа Мъгла"></div>
-      </div>
-    </div>
 
     <!-- CHARGER -->
     <div class="config-section">
@@ -292,22 +277,6 @@ function updateInbox() {
   if (warrantyText) items.push(warrantyText);
   document.getElementById('inboxList').innerHTML = items.map(i => `<li>${i}</li>`).join('');
 }
-
-// Color swatches
-document.querySelectorAll('.color-swatch').forEach(swatch => {
-  swatch.addEventListener('click', () => {
-    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
-    swatch.classList.add('active');
-    selectedColor = {
-      name: swatch.dataset.name,
-      hex: swatch.dataset.hex,
-      img: swatch.dataset.img
-    };
-    document.getElementById('colorLabel').textContent = selectedColor.name;
-    document.getElementById('colorName').textContent = selectedColor.name;
-    document.getElementById('productImage').src = selectedColor.img;
-  });
-});
 
 // Charger options
 document.querySelectorAll('#chargerOptions .option-card').forEach(card => {

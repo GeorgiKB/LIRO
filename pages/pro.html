@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0D0D14" />
   <title>LIRO Pro — E-наргиле | LIRO</title>
+  <link rel="icon" type="image/png" href="../Images/pro-transparent.png" />
   <link rel="stylesheet" href="../css/main.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -49,7 +50,7 @@
     </div>
     <div class="nav-right">
       <a href="cart.html" class="cart-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
           <line x1="3" y1="6" x2="21" y2="6"/>
           <path d="M16 10a4 4 0 01-8 0"/>
@@ -76,25 +77,12 @@
     <div class="config-image-wrap" id="imageWrap">
       <img id="productImage" src="../Images/pro-transparent.png" alt="LIRO Pro" />
     </div>
-    <p id="colorName" style="text-align:center;font-size:13px;color:var(--text-secondary);margin-top:16px">Полунощ</p>
   </div>
 
   <div class="config-form">
     <p class="config-eyebrow">Наргиле без въглени</p>
     <h1 class="config-title">LIRO Pro</h1>
     <p class="config-price" id="totalPrice">399,00 €</p>
-
-    <!-- COLORS -->
-    <div class="config-section">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-        <span class="config-section-title">Цвят</span>
-        <span class="config-section-current" id="colorLabel">Полунощ</span>
-      </div>
-      <div class="color-swatches">
-        <div class="color-swatch active" data-name="Полунощ" data-hex="#0D0D14" data-img="../Images/pro-transparent.png" style="background:#0D0D14" title="Полунощ"></div>
-        <div class="color-swatch" data-name="Лунна Светлина" data-hex="#F0ECE3" data-img="../Images/pro-transparent.png" style="background:#F0ECE3;border:1.5px solid #ddd" title="Лунна Светлина"></div>
-      </div>
-    </div>
 
     <!-- CHARGER -->
     <div class="config-section">
@@ -269,16 +257,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-document.querySelectorAll('.color-swatch').forEach(swatch => {
-  swatch.addEventListener('click', () => {
-    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
-    swatch.classList.add('active');
-    selectedColor = { name: swatch.dataset.name, img: swatch.dataset.img };
-    document.getElementById('colorLabel').textContent = selectedColor.name;
-    document.getElementById('colorName').textContent = selectedColor.name;
-    document.getElementById('productImage').src = selectedColor.img;
-  });
-});
+
 
 document.querySelectorAll('#chargerOptions .option-card').forEach(card => {
   card.addEventListener('click', () => {
