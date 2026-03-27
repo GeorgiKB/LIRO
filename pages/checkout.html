@@ -219,6 +219,9 @@
       text-align: center;
     }
   </style>
+  <meta name="description" content="Завършване на поръчката. Въведете вашите данни за доставка и плащане за да финализирате покупката на LIRO." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://liro-bg.com/checkout" />
 </head>
 <body>
 <div class="announcement-bar">Безплатна доставка за всяка поръчка!</div>
@@ -486,19 +489,15 @@ function submitOrder() {
   btn.disabled = true;
   btn.textContent = 'Изпращане...';
 
-  // ── PLUG IN YOUR ENDPOINT HERE ──
-  // Example with Google Apps Script:
-  // fetch('https://script.google.com/macros/s/YOUR_ID/exec', {
-  //   method: 'POST',
-  //   mode: 'no-cors',
-  //   body: JSON.stringify(order)
-  // }).then(() => showSuccess()).catch(() => { btn.disabled=false; btn.textContent='Потвърди поръчката'; });
+  const ORDERS_ENDPOINT = 'https://formspree.io/f/mgopowln';
 
-  // For now: simulate a 1-second submission
-  setTimeout(() => {
-    clearCart();
-    showSuccess();
-  }, 1000);
+  fetch(ORDERS_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(order)
+  })
+    .then(r => r.ok ? (clearCart(), showSuccess()) : Promise.reject())
+    .catch(() => { btn.disabled = false; btn.textContent = 'Потвърди поръчката'; });
 }
 
 function showSuccess() {
