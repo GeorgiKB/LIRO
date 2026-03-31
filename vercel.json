@@ -2,14 +2,14 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/neo",      "destination": "/pages/neo.html" },
-    { "source": "/aura",     "destination": "/pages/aura.html" },
-    { "source": "/pro",      "destination": "/pages/pro.html" },
-    { "source": "/about",    "destination": "/pages/about.html" },
-    { "source": "/faq",      "destination": "/pages/faq.html" },
-    { "source": "/delivery", "destination": "/pages/delivery.html" },
-    { "source": "/returns",  "destination": "/pages/returns.html" },
-    { "source": "/cart",     "destination": "/pages/cart.html" },
-    { "source": "/checkout", "destination": "/pages/checkout.html" }
+    { "source": "/neo",      "destination": "/pages/neo" },
+    { "source": "/aura",     "destination": "/pages/aura" },
+    { "source": "/pro",      "destination": "/pages/pro" },
+    { "source": "/about",    "destination": "/pages/about" },
+    { "source": "/faq",      "destination": "/pages/faq" },
+    { "source": "/delivery", "destination": "/pages/delivery" },
+    { "source": "/returns",  "destination": "/pages/returns" },
+    { "source": "/cart",     "destination": "/pages/cart" },
+    { "source": "/checkout", "destination": "/pages/checkout" }
   ]
 }
